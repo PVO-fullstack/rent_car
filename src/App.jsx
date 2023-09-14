@@ -9,8 +9,8 @@ export const App = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
+        <Route index element={<Home />} />
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/favorites" element={<Favorites />} />
         </Route>

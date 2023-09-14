@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getCar } from "../../styles/api/api";
+import { useEffect, useState } from "react";
+import { getCar } from "../../api/api";
 import { Card } from "../Card/Card";
 import styles from "./CarCatalog.module.scss";
 
@@ -10,7 +10,7 @@ export const CarCatalog = () => {
 
   useEffect(() => {
     (async () => {
-      const allCar = await getCar();
+      const allCar = await getCar(1);
       setCars(allCar);
     })();
   }, []);
@@ -20,6 +20,7 @@ export const CarCatalog = () => {
       <ul className={styles.cards}>
         {cars && cars.map((car) => <Card key={car.id} data={car} />)}
       </ul>
+      <button className={styles.btn}>Load more</button>
     </div>
   );
 };

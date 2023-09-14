@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: blueviolet;
+    opacity: 0.5;
+    background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0.00) 100%);
+}
+
+.link {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #001826;
+    font-weight: 500;
+
+}
