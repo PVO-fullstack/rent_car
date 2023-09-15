@@ -3,20 +3,18 @@
     width: 274px;
     height: 426px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-top: 14px;
-        margin-right: 14px;
-        width: 18px;
-        height: 18px;
-        background-image: url("/images/heart.svg");
-        color: white
-    }
-
 }
+
+.heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 14px;
+    margin-right: 14px;
+    width: 18px;
+    height: 18px;
+}
+
 
 .img {
     display: block;

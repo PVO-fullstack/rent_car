@@ -1,40 +1,26 @@
-import { Field, Formik } from "formik";
+import React from "react";
 
 export const Form = () => {
   return (
     <div>
-      return (
-      <div>
-        <Formik
-          initialValues={{ name: "", email: "", password: "" }}
-          onSubmit={(values, { resetForm }) => {
-            resetForm();
-          }}
-        >
-          {(formik) => {
-            const { handleChange, setFieldTouched } = formik;
-            return (
-              <Form>
-                <Field
-                  component="select"
-                  name="name"
-                  placeholder="Name"
-                  onChange={(e) => {
-                    setFieldTouched("name");
-                    handleChange(e);
-                  }}
-                >
-                  <option value="NY">New York</option>
-                  <option value="SF">San Francisco</option>
-                  <option value="CH">Chicago</option>
-                  <option value="OTHER">Other</option>
-                </Field>
-              </Form>
-            );
-          }}
-        </Formik>
-      </div>
-      );
+      <form>
+        <label>
+          Car brand
+          <select name="select">
+            <option value="value1">Значение 1</option>
+            <option value="value2">Значение 2</option>
+            <option value="value3">Значение 3</option>
+          </select>
+        </label>
+        <label>
+          Price/ 1 hour
+          <select name="select">
+            <option value="value1">Значение 1</option>
+            <option value="value2">Значение 2</option>
+            <option value="value3">Значение 3</option>
+          </select>
+        </label>
+      </form>
     </div>
   );
 };

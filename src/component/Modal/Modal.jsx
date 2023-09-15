@@ -36,7 +36,7 @@ export const Modal = ({ data, close }) => {
       {createPortal(
         <div className={styles.backdrop}>
           <div className={styles.modal}>
-            <div className={styles.modalConteiner}>
+            <div className={styles.modal_conteiner}>
               <img
                 onClick={handleClose}
                 width={461}
@@ -62,7 +62,7 @@ export const Modal = ({ data, close }) => {
                   {engineSize}
                 </p>
               </div>
-              <p className={styles.carDescription}>{description}</p>
+              <p className={styles.car_description}>{description}</p>
               <div>
                 <p className={styles.accessories}>
                   Accessories and functionalities:

@@ -14,15 +14,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    max-width: 541px;
-    max-height: 752px;
-    overflow-y: auto;
+    width: 541px;
+    height: 752px;
+    overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 24px;
     background: #FFF;
 }
 
-.modalConteiner {
+.modal_conteiner {
     padding: 40px;
 }
 
@@ -79,7 +79,7 @@
     color: rgba(18, 20, 23, 0.50);
 }
 
-.carDescription {
+.car_description {
     margin-top: 14px;
     margin-bottom: 24px;
     color: #121417;
@@ -114,6 +114,7 @@
 }
 
 .rental {
+    margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
