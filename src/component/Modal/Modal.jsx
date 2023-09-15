@@ -2,8 +2,23 @@ import PropTypes from "prop-types";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.scss";
 import closeSVG from "/images/x.svg";
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export const Modal = ({ data, close }) => {
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        close();
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [close]);
+
   const {
     id,
     accessories,
@@ -11,12 +26,10 @@ export const Modal = ({ data, close }) => {
     description,
     engineSize,
     fuelConsumption,
-    functionalities,
     img,
     make,
     mileage,
     model,
-    rentalCompany,
     rentalConditions,
     rentalPrice,
     type,
@@ -31,10 +44,16 @@ export const Modal = ({ data, close }) => {
     close();
   };
 
+  const handleCloseModal = (e) => {
+    if (e.target === e.currentTarget) {
+      close();
+    }
+  };
+
   return (
     <>
       {createPortal(
-        <div className={styles.backdrop}>
+        <div onClick={handleCloseModal} className={styles.backdrop}>
           <div className={styles.modal}>
             <div className={styles.modal_conteiner}>
               <img
@@ -89,7 +108,9 @@ export const Modal = ({ data, close }) => {
                   Price: <span className={styles.age}>{rentalPrice}</span>
                 </p>
               </div>
-              <button className={styles.btn}>Rental car</button>
+              <NavLink to="tel:+380730000000" className={styles.btn}>
+                Rental car
+              </NavLink>
             </div>
           </div>
         </div>,
