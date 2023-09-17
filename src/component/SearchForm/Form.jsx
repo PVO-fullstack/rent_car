@@ -116,7 +116,7 @@ export const Form = ({ getSearchCar }) => {
                     <span>To</span>
                     <input
                       className={styles.mileage_input}
-                      name="minMileage"
+                      name="maxMileage"
                       type="number"
                       onChange={(e) =>
                         setSearchParams((prev) => ({

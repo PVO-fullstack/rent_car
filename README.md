@@ -1,8 +1,15 @@
-# React + Vite
+Welcome to site for rent avto.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+On the site we can select avto for your buisness or travell.
 
-Currently, two official plugins are available:
+You can find car in our list of car
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Else you can use filter.
+
+It is may be filter of car brand
+
+Filter of price
+
+Or filter of mileage
+
+You also can add car to favorite
