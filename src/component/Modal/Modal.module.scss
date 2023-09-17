@@ -150,6 +150,7 @@
     border: none;
 
     &:hover {
-        background: #0B44CD;
+        transition: all, 0.5s;
+        background-color: #0B44CD;
     }
 }

@@ -1,6 +1,7 @@
 .conteiner {
-
-    padding: 50px 129px 150px;
+    padding-bottom: 150px;
+    padding-left: 129px;
+    padding-right: 129px;
 }
 
 .cards {
@@ -23,7 +24,9 @@
     font-weight: 500;
     line-height: 1.5;
 
-    &:active {
+    &:active,
+    &:hover {
+        transition: all, 0.5s;
         color: #0B44CD
     }
 }
